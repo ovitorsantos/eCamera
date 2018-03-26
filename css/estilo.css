@@ -1,0 +1,569 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+
+#check {
+    display: none;
+}
+
+#icone {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    padding: 0.8em;
+
+
+}
+
+.barra {
+    background-color: #333;
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    transition: all .2s linear;
+    left: -300px;
+
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.link {
+    background-color: #494950;
+    padding: 20px;
+    font-family: 'Arial';
+    font-size: 12pt;
+    transition: all 0.2s linear;
+    color: white;
+    border-bottom: 2px solid #222;
+    opacity: 0;
+    margin-top: 200px;
+
+}
+
+.link:hover {
+    background-color: #050542;
+}
+
+#check:checked ~ .barra {
+    transform: translateX(300px)
+}
+
+#check:checked ~ .barra nav a .link {
+    opacity: 1;
+    margin-top: 0px;
+    transition-delay: 0.2;
+}
+
+.video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1000;
+    position: absolute;
+}
+
+
+.conteudo {
+    width: 100%;
+    text-align: center;
+    padding-top: 1em;
+    color: white;
+    font-size: 25px;
+    letter-spacing: 4px;
+    height: 100vh;
+
+
+}
+
+
+.Entra {
+    margin-top:80px;
+    text-align: center;
+}
+
+.Entra a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid #ebebe0;
+    padding: 10px 80px 10px 80px;
+    border-radius: 16px;
+    text-align: center;
+    align-items: center;
+}
+
+.Entra a:hover {
+    opacity: 0.3;
+
+}
+
+
+.register{
+    margin-top: 2.3em;
+}
+.Registrar{
+    margin-top: 40px;
+}
+.Registrar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid #ebebe0;
+    padding: 10px 59px 10px 59px;
+    border-radius: 16px;
+    text-align: center;
+    align-items: center;
+}
+
+.Registrar a:hover {
+    opacity: 0.3;
+}
+
+
+.semlogin {
+    margin-top: 30px;
+    text-align: center;
+
+}
+
+.semlogin a {
+    text-align: center;
+    color: white;
+    opacity: 0.6;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.semlogin a:hover {
+    opacity: 0.3;
+}
+
+
+
+.menu{
+    background-image: url(../img/fundolive.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    text-align: center;
+}
+
+
+
+.fundolive {
+    background-image: url(../img/fundolive.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+    text-align: center;
+}
+
+.videoPlayer {
+    height: 20em;
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+.information {
+    color: white;
+
+}
+
+.information h2 {
+    font-size: 35px;
+    padding-top: 0.4em;
+    text-shadow: 1px 0 0 #000;
+    padding-left: .5em;
+
+
+}
+
+.information p {
+    padding-top: 1.5em;
+    font-size: 25px;
+    text-shadow: 1px 0 0 #000;
+
+}
+.button{
+    padding-top: 3em;
+    padding-bottom: 4em;
+}
+.button a{
+    padding: 15px 50px 15px 50px;
+    font-family: 'Arial';
+    color: white;
+    background-color: #858696;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    font-size: 18px;
+    text-decoration: none;
+
+}
+
+
+.button a:hover {
+    opacity: 0.5;
+}
+
+.container {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.menu h1 {
+    font-size: 50px;
+    text-shadow: 2px 0 0 #000;
+    color: white;
+    padding-top: 0.8em;
+}
+
+.menua {
+    padding-top: 3.7em;
+    font-size: 30px;
+
+}
+
+.menua a {
+    color: white;
+    text-decoration: none;
+
+}
+
+.menua hr {
+    margin-top: 9px;
+    margin-bottom: 9px;
+}
+
+.menua a:hover {
+    opacity: 0.5;
+
+}
+
+#loginGoogle{
+    width:90%;
+    border-radius:5px;
+}
+
+.login {
+    padding-top: 1em;
+    padding-top: 1em;
+
+}
+.login span{
+    opacity: 0.8;
+    font-size: 18px;
+    text-decoration: underline;
+
+}
+
+.login input {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: rgb(200, 200, 200);
+}
+.RegistrarTela{
+    background-image: url(../img/fundo.jpg);
+    background-size:auto;
+}
+.login input[type="password"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    color: rgb(250, 250, 250);
+
+
+}
+.login input[type="text"]{
+    border:none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    height: 40px;
+    background:transparent;
+    font-size: 16px;
+    color: rgb(250,250,250);
+}
+.login input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40px;
+    font-size: 16px;
+    font-family: sans-serif;
+    background: #77b55a;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.login input[type="submit"]:hover {
+    background: green;
+
+}
+
+.Esqueci {
+    text-decoration: underline;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 17px;
+    opacity: 0.5;
+}
+
+
+
+.live {
+    padding-top: 2em;
+
+}
+
+
+.coporfundo h2 {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding-top: 0.2em;
+}
+
+
+
+.acord {
+    width: 100%;
+    height: auto;
+    font-family: 'Arial';
+    text-align: left;
+}
+
+.item input {
+    display: none;
+}
+
+.item label {
+    display: block;
+    padding: 10px;
+    background-color: #3259A7;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+    border-bottom: solid 2px #aaa;
+
+}
+
+.item label:hover {
+    background-color: #f2673a;
+}
+
+.item ul {
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 0.5s linear;
+}
+
+.item input:checked ~ ul {
+    height: auto;
+    max-height: 2000px;
+    transform: all;
+}
+
+
+
+.item ul li a {
+    width: 100%;
+    height: 30px;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    background-color: #fafafa;
+    color: #333;
+    border-bottom: solid 2px #aaa;
+}
+
+.item ul li a:hover {
+    background-color: #9cf;
+}
+
+.executivo ul li a{
+    height: 50px;
+}
+
+.hrExe{
+    align-items: center;
+}
+
+
+.corp {
+    background-color: #4F88CD;
+    text-align: center;
+}
+
+.corp h2 {
+    text-shadow: 1px 2px #003;
+    padding-top: 10px;
+    font-size: 40px;
+    color: white;
+}
+
+.corp p {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 22px;
+    text-shadow: 1px 2px #003;
+
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+.modalMensagem{
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.modal-content h2{
+    font-size: 25px;
+}
+
+#input-assunto{
+    width: 90%;
+    height: 25px;
+    border-radius:3px;
+    border: solid 1px black;
+    padding:5px;
+    
+    
+}
+
+.modal-content select{
+    width: 93%;
+    height: 40px;
+    border-radius:3px;
+    padding: 5px;
+
+}
+
+#input-Mensagem{
+    height: 180px;
+    width: 90%;
+    border-radius:3px;
+    padding: 5px;
+    
+
+}
+
+#input-Nome, #input-Email{
+    width: 90%;
+    height: 25px;
+    border-radius: 3px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#enviarArquivo{
+    font-size: 14px;
+}
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal-content h4{
+    font-size: 18px;
+    padding-left: 0.6em;
+    
+}
+
+.modalMensagem button{
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 70px 8px 70px;
+    margin-top: 20px;
+    color: white;
+    background-color: #3F3736;
+    
+}
+
+.modal-content h6{
+    margin-top: 0.5em;
+    font-size: 18px;
+    text-align: justify;
+    padding-left: .6em;
+    margin-bottom: 0.3em;
+
+
+}
+
+.data{
+    display: none;
+    margin-top: 2em;
+    border-top: 5px solid #d1e0e0;
+
+}
+.data p{
+    font-size: 20px;
+}
+.btn-Sair{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color:#ff3333;
+}

@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="google-signin-client_id" content="253385129151-me5rjrkoid5uqoguj0ok8bfsiq6mdbik.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- Meu CSS -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+    <div class="corp">
+
+
+
+        <input type="checkbox" id="check">
+        <label id="icone" for="check">
+            <img src="icon/hamb.png" width="35px">
+        </label>
+        <div class="barra">
+            <nav>
+                <a href="live.html">
+                    <div class="link">Streaming</div>
+                </a>
+                <a href="corp.html">
+                    <div class="link">Corporação</div>
+                </a>
+
+                <div class="data">
+                  <p>Detalhes do perfil</p>
+                  <img id="pic" width="100%" height="100">
+                  <p>Endereço de email</p> 
+                  <p id="email"></p>
+                  <button onclick="signOut()" class="btn-Sair">Sair da conta</button>
+                </div>
+            </nav>
+
+        </div>
+
+        <h2>Corporação</h2>
+        <p>Lista de corporação</p>
+        <br>
+        <div class="acord">
+            <div class="item">
+                <input type="checkbox" id="check1">
+                <label for="check1">Parlamentares</label>
+                <ul>
+                    <li>
+                        <a href=""><b>Nome:</b> Tonhão da Borracharia<br><b>Partido:</b> PPS</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Prof. Caio Porto<br><b>Partido:</b> PSD</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Mirão Basso<br><b>Partido:</b> PP</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Denis Eduardo Machado<br><b>Partido:</b> MDB </a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Eduardo Henrique Moutinho<br><b>Partido:</b> PSB   </a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Genésio Aparecido Valensio<br><b>Partido:</b> PRB</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Gilberto Junqueira<br><b>Partido:</b> DEM</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Joel da Joctel<br><b>Partido:</b> PPS</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> José Roberto Girotto<br><b>Partido:</b> PTB</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> José Rodrigo de Pietro<br><b>Partido:</b> SD</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Marcos Aparecido Lourençano <br><b>Partido:</b> MDB</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Marcos Bonilla<br><b>Partido:</b> DEM</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Juninho Previdelli<br><b>Partido:</b> SD</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Wadinho Peretti<br><b>Partido:</b> MDB</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Valcir Conceição Zacarias<br><b>Partido:</b>  PSB</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check2">
+                <label for="check2">Suplentes em exercício</label>
+                <ul>
+                    <li>
+                        <a href=""><b>Nome:</b> Angelim <br><b>Partido:</b> PP</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Cido Bolivar <br><b>Partido:</b> PPS</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Eder Mineiro <br><b>Partido:</b> PTB</a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="item">
+                <input type="checkbox" id="check3">
+                <label for="check3">Mesa Diretora</label>
+                <ul>
+                    <li>
+                        <a href=""><b>Nome:</b> José Rodrigo de Pietro<br> <b>Partido:</b> SD</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Marcos Bonilla<br> <b>Partido:</b> DEM                        </a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Juninho Previdelli	<br> <b>Partido:</b> SD</a>
+                    </li>
+                    <li>
+                        <a href=""><b>Nome:</b> Prof. Caio Porto	<br> <b>Partido:</b> PSD</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="item executivo">
+                <input type="checkbox" id="check4">
+                <label for="check4">Poder Executivo </label>
+                <ul>
+                    <li>
+                        <a href=""> <strong><i>PREFEITO</i></strong><br><b><i>Nome:</i></b>  Vanderlei José Marsico	<br> <b><i>Partido:</i></b> PSD</a>
+                    </li>
+                    <li>
+                        <a href=""><strong><i></i>VICE PREFEITO</i></strong><br><b><i>Nome:</i></b>  Luiz Fernando Coelho da Rocha<br> <b><i>Partido:</i></b> SD</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="modalMensagem">
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn">Entre em contato</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+
+
+
+            <div class="modal-content">
+                <span class="close">&times;</span>
+
+                <h2>Entre em contato com nossa corporação</h2>
+                <br>
+
+                <form action="enviarEmail.php">
+                    <h6>Assunto:</h6>
+                    <input name="assunto" type="text" id='input-assunto' placeholder="Ex. Duvidas" required>
+                    <br>
+                    <h6>Para quem deseja mandar a mensagem:</h6>
+                    <select name="destino">
+                        <option value="vitinhotqoficial@gmail.com">Camera</option>
+                        <option value="antoniovidal@camarataquaritinga.sp.gov.br">Tonhão da Borracharia</option>
+                        <option value="professorcaio@camarataquaritinga.sp.gov.br">Prof. Caio Porto</option>
+                        <option value="mirao@camarataquariinga.sp.gov.br">Mirão Basso</option>
+                        <option value="denis@camarataquaritinga.sp.gov.br">Denis Eduardo Machado</option>
+                        <option value="moutinho@camarataquaritinga.sp.gov.br">Eduardo Henrique Moutinho</option>
+                        <option value="genesio@camarataquaritinga.sp.gov.br">Genésio Aparecido Valensio</option>
+                        <option value="gilberto@camarataquaritinga.sp.gov.br">Gilberto Junqueira</option>
+                        <option value="mercedes">Joel da Joctel</option>
+                        <option value="mercedes">José Roberto Girotto</option>
+                        <option value="depietro@camarataquaritinga.sp.gov.br">José Rodrigo de Pietro</option>
+                        <option value="lourencano@camarataquaritinga.sp.gov.br">Marcos Aparecido Lourençano</option>
+                        <option value="bonilla@camarataquaritinga.sp.gov.br">Marcos Bonilla</option>
+                        <option value="juninhoprevidelli@camarataquaritinga.sp.gov.br">Juninho Previdelli</option>
+                        <option value="wadinho@camarataquariinga.sp.gov.br">Wadinho Peretti</option>
+                        <option value="valcir@camarataquariinga.sp.gov.br">Valcir Conceição Zacarias</option>
+                        <option value="angelim@camarataquaritinga.sp.gov.br">Angelim</option>
+                        <option value="mercedes">Cido Bolivar</option>
+                        <option value="edermineiro@camarataquaritinga.sp.gov.br">Eder Mineiro</option>
+                        <option value="mercedes">Vanderlei José Marsico</option>
+                        <option value="mercedes">Luiz Fernando Coelho da Rocha</option>
+                    </select>
+                    <h6>Mensagem:</h6>
+                    <br>
+                    <textarea name="mensagem" placeholder='Escreve sua mensagem' id='input-Mensagem' required></textarea>
+                    <h6>Anexo:</h6>
+                    <br>
+                    <input type="file" nome="anexo" id='enviarArquivo' placeholder="Anexo">
+                    <br>
+                    <button type='submit' id="input-enviar" formmethod="post">Enviar</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+
+
+<!-- Script do modal -->
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal 
+    btn.onclick = function () {
+        alert("Sua mensagem só sera enviada se estiver logado");
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+<!-- script Enviar email -->
+<script>
+</script>
+
+</html>

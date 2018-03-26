@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="google-signin-client_id" content="253385129151-me5rjrkoid5uqoguj0ok8bfsiq6mdbik.apps.googleusercontent.com">
+    
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- Meu CSS -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.12&appId=146640729497985&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{146640729497985}',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{latest-api-version}'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+FB.getLoginStatus(function(response) {
+    statusChangeCallback(response);
+});
+
+{
+    status: 'connected',
+    authResponse: {
+        accessToken: '...',
+        expiresIn:'...',
+        signedRequest:'...',
+        userID:'...'
+    }
+}
+
+
+
+</script>
+
+
+    <header>
+        <div class="RegistrarTela">
+        <!-- video -->
+
+        <!-- Textos-->
+        <div class="conteudo">
+            <div class="login container register">
+                <input type="text" name="nome" placeholder="Digite seu nome:" required><br>
+                <input type="email" placeholder="Digite seu email" required><br>
+                <input type="password" placeholder="Digite sua senha" required><br>
+                <input type="password" placeholder="Confirme sua senha" required><br>
+
+                <input type="submit" name="" value="Registrar" required>
+                <br><br>
+                <hr>
+                <br>
+                <p>Ou Continue com </p>
+                <center><div class="g-signin2" data-onsuccess="onSignIn"></div></center>
+<center><div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div></center>  
+            </div>
+            
+        </div>
+
+        
+        <!-- Textos-->
+
+    </header>
+</div>
+
+<script>   
+
+
+
+    function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+          console.log('Name: ' + profile.getName());
+          console.log('Image URL: ' + profile.getImageUrl());
+          console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+            
+            $(".g-signin2").css("display","none")
+            $(".data").css("display", "block")
+            $("#pic").attr('src',profile.getImageUrl())
+            $("#name").text(profile.getName())
+            $("#email").text(profile.getEmail())    
+                      window.location.replace("menu.html")
+
+}
+
+function onSignOut(){
+        var auth2 = gapi.auth2.getAuthInstance()
+        auth2.signOut().then(function(){
+        alert("Voce saiu da conta")
+
+        $(".g-signin2").css("display","block")
+        $(".data").css("display", "none")
+
+        
+
+})
+}
+</script>
+  
+
+
+</body>
+
+</html>

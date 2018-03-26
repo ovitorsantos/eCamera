@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google API -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="google-signin-client_id" content="253385129151-me5rjrkoid5uqoguj0ok8bfsiq6mdbik.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <!-- Meu CSS -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+    <body>
+        
+        <div class="fundolive">
+
+
+
+            <div class="information container">
+
+                <input type="checkbox" id="check">
+                <label id="icone" for="check"><img src="icon/hamb.png" width="35px"></label>
+                <div class="barra">
+                    <nav>
+                        <a href="live.html">
+                            <div class="link">Streaming</div>
+                        </a>
+                        <a href="corp.html">
+                            <div class="link">Corporação</div>
+                        </a>
+
+                    <div class="data">
+                      <p>Detalhes do perfil</p>
+                      <img id="pic" width="100%" height="100">
+                      <p>Nome</p>
+                      <p id="Nome"></p>
+                      <p>Endereço de email</p> 
+                      <p id="email"></p>
+                      <button onclick="signOut()" class="btn-Sair">Sair da conta</button>
+                    </div>
+
+                    </nav>
+                   
+                </div>
+
+                <h2>Câmara ao vivo</h2>
+                <p>Sessões ao vivo, as segundas das 19:30h as 22:30h. </p><br>
+
+                <hr>
+
+
+                <div class="live">
+
+                    <iframe src="https://player.jmvstream.com/6TkFNb3J9igpAQDq1LLvkmrCVKKv0h" class="videoPlayer"></iframe>
+
+                </div>
+
+                
+                <p>Receba uma notificação quando a sessão começar</p>
+                <div class="button">
+                <a href="" id="notifi">Receber</a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </body>
+
+    <script>
+        var btnNotifi = document.getElementById("notifi");
+
+        btnNotifi.onclick = function(){
+            alert("Você sera notificado as 19:30")
+        }
+
+    </script>
+    <script>
+        Notification.requestPermission(
+            function(status){
+                console.log('Notification permission status:', status)
+            }
+        )
+        
+        function displayNotification()  {
+            if (Notification.permission === 'granted')  {
+                navigator.serviceWorker.getRegistration()
+                    .then(function(reg){
+                        reg.showNotification('Hello World!')
+                    })
+            }
+        }   
+
+        var options = {
+            body: 'Here is notification body!',
+            icon: 'img/login.png',
+            vibrate: [100, 50, 100],
+            data: {primaryKey: 1}
+        }  
+        reg.showNotification('Hello world!', options)
+    </script>
+
+</html>
